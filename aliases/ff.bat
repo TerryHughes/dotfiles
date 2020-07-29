@@ -1,0 +1,6 @@
+@ECHO OFF
+SETLOCAL
+
+IF "%1"=="" GOTO :EOF
+
+DIR %1 /B /S
