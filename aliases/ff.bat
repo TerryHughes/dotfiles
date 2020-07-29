@@ -1,0 +1,6 @@
+@ECHO OFF
+SETLOCAL
+
+IF "%1"=="" EXIT /B 0
+
+DIR %1 /B /S
