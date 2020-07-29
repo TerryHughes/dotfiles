@@ -44,6 +44,7 @@ alias g='git'
 alias l='g log --graph --oneline'
 alias la='l --all'
 alias rb='g rebase'
+alias rbc='rb --continue'
 alias rbi='rb --interactive'
 alias st='g status --short --branch'
 
