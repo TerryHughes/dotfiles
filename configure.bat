@@ -34,3 +34,41 @@ IF EXIST "%dotfiles%\configurations\lazygit" (
 		MKLINK /J "%AppData%\jesseduffield\lazygit" "%dotfiles%\configurations\lazygit" > NUL
 	)
 )
+
+
+SET wDrive=w-drive
+MKDIR "%wDrive%"\projects 2> NUL
+
+IF EXIST "%dotfiles%\aliases" (
+	IF NOT EXIST "%wDrive%\aliases" (
+		ECHO Linking aliases
+		MKLINK /J "%wDrive%\aliases" "%dotfiles%\aliases" > NUL
+		START cmd /C tools\update-user-path.bat "W:\aliases;W:\aliases\git;"
+		timeout /T 1 /NOBREAK > NUL
+	)
+)
+
+IF EXIST "%dotfiles%\shells" (
+	IF NOT EXIST "%wDrive%\shells" (
+		ECHO Linking shells
+		MKLINK /J "%wDrive%\shells" "%dotfiles%\shells" > NUL
+	)
+)
+
+IF EXIST "%dotfiles%\tools" (
+	IF NOT EXIST "%wDrive%\tools" (
+		ECHO Linking tools
+		MKLINK /J "%wDrive%\tools" "%dotfiles%\tools" > NUL
+		START cmd /C tools\update-user-path.bat "W:\tools;"
+		timeout /T 1 /NOBREAK > NUL
+	)
+)
+
+IF EXIST "%dotfilesExternalTools%" (
+	IF NOT EXIST "%wDrive%\tools-external" (
+		ECHO Linking tools-external
+		MKLINK /J "%wDrive%\tools-external" "%dotfilesExternalTools%" > NUL
+		START cmd /C tools\update-user-path.bat "W:\tools-external;"
+		timeout /T 1 /NOBREAK > NUL
+	)
+)

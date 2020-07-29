@@ -16,6 +16,18 @@ go() {
 
 	Location=$1
 
+	if [ -d ~/projects/$Location ]; then
+		cd ~/projects/$Location
+		return
+	fi
+
+	if [ $Location == "p" ]; then Location="projects"; fi
+
+	if [ -d ~/$Location ]; then
+		cd ~/$Location
+		return
+	fi
+
 	echo Unknown location \'$Location\'
 }
 pgo() {
@@ -59,3 +71,5 @@ shp() {
 alias st='g status --short --branch'
 
 PS1='[\u@\h \W]\$ '
+
+export PATH="$PATH:$HOME/tools"
