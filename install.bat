@@ -76,3 +76,34 @@ IF NOT DEFINED FoundToolsExternal SET TemporaryPath=%TemporaryPath%W:\tools-exte
 DEL "%TemporaryPathFile%"
 
 setx Path "%TemporaryPath%" > NUL
+
+
+IF EXIST "%dotfiles%\configurations\vimfiles" (
+	IF NOT EXIST "vimfiles" (
+		MKLINK /J "vimfiles" "%dotfiles%\configurations\vimfiles" > NUL
+	)
+)
+
+SETLOCAL ENABLEDELAYEDEXPANSION
+
+SET DesiredVimVersion=82
+SET DesiredVimExe=gvim%DesiredVimVersion%.exe
+
+where gvim > NUL 2> NUL
+IF NOT %ERRORLEVEL%==0 (
+	PUSHD "%USERPROFILE%\Downloads"
+	IF NOT EXIST "%DesiredVimExe%" (
+		curl -LJO "https://ftp.nluug.nl/pub/vim/pc/%DesiredVimExe%"
+		IF NOT !ERRORLEVEL!==0 (
+			ECHO curl did not complete successfully: !ERRORLEVEL!
+		)
+	)
+	ECHO.
+	ECHO   check 'Create .bat files'
+	ECHO uncheck 'Create icons for Vim\On the Desktop'
+	"%DesiredVimExe%"
+	IF NOT !ERRORLEVEL!==0 (
+		ECHO vim did not install successfully: !ERRORLEVEL!
+	)
+	POPD
+)
