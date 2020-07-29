@@ -28,6 +28,16 @@ go() {
 		return
 	fi
 
+	if [ $Location == "adventure" ] || [ $Location == "adv" ]; then
+		Location="Legacy/FifthElement/dev/work/projects/adventure"
+		return
+	fi
+
+	if [ $Location == "handmade-hero" ] || [ $Location == "hmh" ]; then
+		Location="Legacy/FifthElement/dev/Handmade\ Hero"
+		return
+	fi
+
 	echo Unknown location \'$Location\'
 }
 pgo() {

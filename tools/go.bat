@@ -25,3 +25,17 @@ IF EXIST "W:\%Location%" (
 GOTO %Location% 2> NUL || (
 	ECHO Unknown location '%Location%'
 )
+
+:adventure
+:adv
+	L:
+	CD "\FifthElement\dev\work\projects\adventure\"
+	IF DEFINED SetTitle TITLE adventure
+	EXIT /B 0
+
+:handmade-hero
+:hmh
+	L:
+	CD "\FifthElement\dev\Handmade Hero\"
+	IF DEFINED SetTitle TITLE hmh
+	EXIT /B 0
