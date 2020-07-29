@@ -30,3 +30,5 @@ fs() {
 	fstr $1 --include="*.sh" --include="*.h" --include="*.c"
 }
 alias v='vim'
+
+alias g='git'
