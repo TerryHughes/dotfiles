@@ -87,3 +87,11 @@ IF NOT DEFINED prompt (
 	ECHO Setting prompt
 	setx prompt $P$S$+$_$G$S > NUL
 )
+
+
+IF EXIST "%dotfiles%\configurations\vimfiles" (
+	IF NOT EXIST "vimfiles" (
+		ECHO Linking Vim
+		MKLINK /J "vimfiles" "%dotfiles%\configurations\vimfiles" > NUL
+	)
+)
