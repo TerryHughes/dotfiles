@@ -1,0 +1,4 @@
+update gitconfig
+
+add shells
+junction shells
