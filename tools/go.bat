@@ -28,3 +28,15 @@ GOTO %1 2> NUL || (
 	W:
 	CD "\tools\"
 	GOTO :EOF
+
+:adventure
+:adv
+	L:
+	CD "\FifthElement\dev\work\projects\adventure\"
+	GOTO :EOF
+
+:handmade-hero
+:hmh
+	L:
+	CD "\FifthElement\dev\Handmade Hero\"
+	GOTO :EOF
