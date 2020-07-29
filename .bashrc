@@ -29,3 +29,4 @@ alias fstr='grep -inr'
 fs() {
 	fstr $1 --include="*.sh" --include="*.h" --include="*.c"
 }
+alias v='vim'
