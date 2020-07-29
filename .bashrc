@@ -34,6 +34,7 @@ alias v='vim'
 
 alias ap='g add --patch'
 alias br='g branch'
+alias cim='g commit --message'
 alias co='g checkout'
 alias f='g fetch'
 alias fpdr='f --prune --dry-run'
