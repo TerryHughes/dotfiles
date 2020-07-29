@@ -15,4 +15,8 @@ IF NOT EXIST "%ProgramFiles(x86)%\Microsoft Visual Studio\2022\BuildTools\VC\Aux
 	CALL "installs\microsoft-build-tools-2022.bat"
 )
 
+IF NOT EXIST "%ProgramFiles%\Google\Chrome" (
+	CALL "installs\chrome.bat"
+)
+
 EXIT 0
