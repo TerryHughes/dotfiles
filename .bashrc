@@ -9,4 +9,18 @@ alias ls='ls --color=auto'
 alias ll='ls --color=auto -l --human-readable -v --group-directories-first --almost-all'
 alias grep='grep --color=auto'
 alias pacman='pacman --color auto'
+
+go() {
+	SetTitle=true
+	DoNotSetTitle=%2
+
+	Location=$1
+
+	echo Unknown location \'$Location\'
+}
+pgo() {
+	pushd .
+	go $1 true
+}
+
 PS1='[\u@\h \W]\$ '
