@@ -107,3 +107,8 @@ IF NOT %ERRORLEVEL%==0 (
 	)
 	POPD
 )
+
+
+IF NOT EXIST "%ProgramFiles%\Google\Chrome" (
+	"%ProgramFiles%\Internet Explorer\iexplore.exe" "https://www.google.com/chrome/"
+)
