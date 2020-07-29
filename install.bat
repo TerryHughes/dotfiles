@@ -28,3 +28,26 @@ IF EXIST "%dotfiles%\configurations\lazygit" (
 		MKLINK /J "%AppData%\jesseduffield\lazygit" "%dotfiles%\configurations\lazygit" > NUL
 	)
 )
+
+
+SET wDrive=w-drive
+
+MKDIR "%wDrive%" 2> NUL
+
+IF EXIST "%dotfiles%\aliases" (
+	IF NOT EXIST "%wDrive%\aliases" (
+		MKLINK /J "%wDrive%\aliases" "%dotfiles%\aliases" > NUL
+	)
+)
+
+IF EXIST "%dotfiles%\tools" (
+	IF NOT EXIST "%wDrive%\tools" (
+		MKLINK /J "%wDrive%\tools" "%dotfiles%\tools" > NUL
+	)
+)
+
+IF EXIST "%dotfilesExternalTools%" (
+	IF NOT EXIST "%wDrive%\tools-external" (
+		MKLINK /J "%wDrive%\tools-external" "%dotfilesExternalTools%" > NUL
+	)
+)
