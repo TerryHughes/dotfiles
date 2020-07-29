@@ -32,6 +32,7 @@ fs() {
 }
 alias v='vim'
 
+alias ap='g add --patch'
 alias br='g branch'
 alias co='g checkout'
 alias f='g fetch'
