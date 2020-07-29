@@ -7,10 +7,12 @@ MKDIR "installs"
 CD "installs"
 curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/master/installs/{git}.bat"
 CD ..
-curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/master/{install}.bat"
+curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/master/{install,configure}.bat"
 "install.bat"
 ```
 ```
+"configure.bat"
+DEL "configure.bat"
 DEL "install.bat"
 RMDIR /S /Q "installs"
 RMDIR /S /Q "tools"
