@@ -25,3 +25,7 @@ mcd() {
 	mkdir $1
 	cd $1
 }
+alias fstr='grep -inr'
+fs() {
+	fstr $1 --include="*.sh" --include="*.h" --include="*.c"
+}
