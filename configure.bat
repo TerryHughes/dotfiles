@@ -16,3 +16,12 @@ IF %ERRORLEVEL%==0 (
 		git clone https://github.com/TerryHughes/dotfiles-externaltools.git "%dotfilesExternalTools%" 2> NUL
 	)
 )
+
+
+MKDIR ".config" 2> NUL
+IF EXIST "%dotfiles%\configurations\git" (
+	IF NOT EXIST ".config\git" (
+		ECHO Linking Git configuration
+		MKLINK /J ".config\git" "%dotfiles%\configurations\git" > NUL
+	)
+)
