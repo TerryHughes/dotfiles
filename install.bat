@@ -51,3 +51,7 @@ IF EXIST "%dotfilesExternalTools%" (
 		MKLINK /J "%wDrive%\tools-external" "%dotfilesExternalTools%" > NUL
 	)
 )
+
+IF NOT EXIST "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat" (
+	MKLINK /H "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat" "%dotfiles%\startup.bat" > NUL
+)
