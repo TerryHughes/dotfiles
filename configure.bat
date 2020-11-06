@@ -72,3 +72,12 @@ IF EXIST "%dotfilesExternalTools%" (
 		timeout /T 1 /NOBREAK > NUL
 	)
 )
+
+
+IF NOT EXIST "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startup.lnk" (
+	ECHO Manually create a shortcut for startup.bat
+	explorer .
+	PAUSE
+	MOVE "%dotfiles%\startup.bat - Shortcut.lnk" "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startup.lnk" > NUL
+)
+CALL "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startup.lnk"
