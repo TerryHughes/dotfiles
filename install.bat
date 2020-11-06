@@ -55,3 +55,24 @@ IF EXIST "%dotfilesExternalTools%" (
 IF NOT EXIST "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat" (
 	MKLINK /H "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat" "%dotfiles%\startup.bat" > NUL
 )
+
+SET TemporaryPath=%Path%
+
+SET TemporaryPathFile=path.txt
+ECHO %TemporaryPath% > "%TemporaryPathFile%"
+
+FOR /F %%A IN ('findstr /L /S /I /N /C:"W:\aliases;" "%TemporaryPathFile%"') DO SET FoundAliases=true
+IF NOT DEFINED FoundAliases SET TemporaryPath=%TemporaryPath%W:\aliases;
+
+FOR /F %%A IN ('findstr /L /S /I /N /C:"W:\aliases\git;" "%TemporaryPathFile%"') DO SET FoundAliasesGit=true
+IF NOT DEFINED FoundAliasesGit SET TemporaryPath=%TemporaryPath%W:\aliases\git;
+
+FOR /F %%A IN ('findstr /L /S /I /N /C:"W:\tools;" "%TemporaryPathFile%"') DO SET FoundTools=true
+IF NOT DEFINED FoundTools SET TemporaryPath=%TemporaryPath%W:\tools;
+
+FOR /F %%A IN ('findstr /L /S /I /N /C:"W:\tools-external;" "%TemporaryPathFile%"') DO SET FoundToolsExternal=true
+IF NOT DEFINED FoundToolsExternal SET TemporaryPath=%TemporaryPath%W:\tools-external;
+
+DEL "%TemporaryPathFile%"
+
+setx Path "%TemporaryPath%" > NUL
