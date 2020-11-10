@@ -1,6 +1,6 @@
 syntax keyword cOperator _PreventExecution InvalidCodePath InvalidDefaultCase Assert _StaticAssert3 _StaticAssert2 _StaticAssert1 StaticAssert NotSupported NotImplemented DoNothing
 
-syntax keyword cType u8_ u16_ u32_ u64_
+syntax keyword cType u8_ u16_ u32_ u64_ u24_
 syntax keyword cType u8x u16x u32x u64x
 syntax keyword cType s8_ s16_ s32_ s64_
 syntax keyword cType s8x s16x s32x s64x
