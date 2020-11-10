@@ -31,6 +31,12 @@ nmap <Leader>n O// NOTE(TerryH):<Space>
 nmap <Leader>t O// TODO(TerryH):<Space>
 nmap <Leader>u j0<C-V>k%k<k%dd<C-O>.
 
+" these mappings interfere with existing functionality
+"nmap <C-N> :cnext<CR>
+"nmap <C-P> :cprevious<CR>
+"nmap <C-M> :cnewer<CR>
+"nmap <C-O> :colder<CR>
+
 imap <Leader>f for (u32x Index = 0; Index < ArrayCount(); ++Index)<CR>{<CR>}<Esc>2kf)i
 imap <Leader>* ****************************************************************************************************
 imap <Leader>{ {<CR>}<Esc>O
@@ -38,3 +44,37 @@ imap <Leader><Tab> <Esc>:set expandtab<CR>a<Tab><Esc>:set noexpandtab<CR>a
 
 vmap <Leader>t :s/=/                =/<CR>
 vmap <Leader>u <...
+
+
+
+"int
+"main()
+"{
+"	// this line ends with tabs			
+"	// this line ends with spaces      
+"	
+"    // this line begins with spaces
+"    #if 1 /* this line begins and ends with spaces */    
+"		#define Something Nothing /* this line ends with a tab surrounded by spaces */   	   
+"	#endif /* this line ends with spaces */    
+"	int one   = 1; /* this line ends with spaces */     
+"    int two   = 2; /* this line begins with spaces and ends with tab */	
+"		int three = 3;
+"	int four  = 4; /* this line ends with tabs and spaces */ 	   	  
+"	    four  = 4;
+"	int five  = 5;
+"	int		six   = 6;
+"	  	  int seven = 7; /* this line contains a tab surrounded by spaces */
+"
+"	int one = 1;
+"	int two = 2;
+"	int three = 3;
+"	int four = 4;
+"	    four = 4;
+"	int five = 5;
+"	int	six = 6;
+"	int seven = 7;
+"
+"#define Foo 0 \
+"          + 0 /* this line begins with spaces */
+"}
