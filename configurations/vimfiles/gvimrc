@@ -1,0 +1,16 @@
+if has('win32')
+	set guifont=Consolas:h10
+else
+	set guifont=Inconsolata\ Medium\ 10
+endif
+
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+
+if has('win32')
+	autocmd GUIEnter * simalt ~x
+else
+	autocmd GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
+endif
