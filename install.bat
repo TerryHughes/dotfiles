@@ -21,3 +21,10 @@ IF EXIST "%dotfiles%\configurations\git" (
 		MKLINK /J ".config\git" "%dotfiles%\configurations\git" > NUL
 	)
 )
+
+MKDIR "%AppData%\jesseduffield" 2> NUL
+IF EXIST "%dotfiles%\configurations\lazygit" (
+	IF NOT EXIST "%AppData%\jesseduffield\lazygit" (
+		MKLINK /J "%AppData%\jesseduffield\lazygit" "%dotfiles%\configurations\lazygit" > NUL
+	)
+)
