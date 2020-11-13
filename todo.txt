@@ -2,5 +2,3 @@ update gitconfig
 
 add shells
 junction shells
-
-move pgo to aliases
