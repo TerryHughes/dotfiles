@@ -1,7 +1,7 @@
 @ECHO OFF
 SETLOCAL
 
-SET Argument=%*
-IF NOT DEFINED Argument SET Argument=.
+SET Arguments=%*
+IF NOT DEFINED Arguments SET Arguments=.
 
-explorer %Argument%
+explorer %Arguments%
