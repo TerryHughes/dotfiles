@@ -15,7 +15,7 @@ IF %ERRORLEVEL%==0 (
 )
 
 
-MKDIR ".config\git" 2> NUL
+MKDIR ".config" 2> NUL
 IF EXIST "%dotfiles%\configurations\git" (
 	IF NOT EXIST ".config\git" (
 		MKLINK /J ".config\git" "%dotfiles%\configurations\git" > NUL
