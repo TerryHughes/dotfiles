@@ -32,6 +32,7 @@ fs() {
 }
 alias v='vim'
 
+alias f='g fetch'
 alias g='git'
 
 PS1='[\u@\h \W]\$ '
