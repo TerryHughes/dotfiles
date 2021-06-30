@@ -31,6 +31,7 @@ fs() {
 }
 alias v='vim'
 
+alias br='g branch'
 alias f='g fetch'
 alias fpdr='f --prune --dry-run'
 alias g='git'
