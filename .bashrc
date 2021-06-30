@@ -31,4 +31,5 @@ fs() {
 }
 alias v='vim'
 
+alias f='g fetch'
 alias g='git'
