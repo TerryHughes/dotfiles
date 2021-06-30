@@ -32,4 +32,5 @@ fs() {
 alias v='vim'
 
 alias f='g fetch'
+alias fpdr='f --prune --dry-run'
 alias g='git'
