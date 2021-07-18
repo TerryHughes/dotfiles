@@ -1,3 +1,15 @@
 [user]
 	name = TerryH
 	email = terry@tnthughes.net
+[core]
+	editor = "C:/Windows/gvim.bat -f"
+[rebase]
+	autoSquash = true
+	autoStash = true
+[merge]
+	ff = false
+[push]
+	autoSetupRemote = true
+[alias]
+	h = help
+	pushf = push --force-with-lease
