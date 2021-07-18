@@ -47,6 +47,7 @@ alias rb='g rebase'
 alias rba='rb --abort'
 alias rbc='rb --continue'
 alias rbi='rb --interactive'
+alias shl='g stash list'
 alias st='g status --short --branch'
 
 PS1='[\u@\h \W]\$ '
