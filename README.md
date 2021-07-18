@@ -1,13 +1,13 @@
 ```
 MKDIR "tools" 2> NUL
 CD "tools"
-curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/master/tools/{update-user-path}.bat"
+curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/personal/TerryH/wip/tools/{update-user-path}.bat"
 CD ..
 MKDIR "installs"
 CD "installs"
-curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/master/installs/{git,vim,microsoft-build-tools-2022,chrome,7-zip,everything,windirstat}.bat"
+curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/personal/TerryH/wip/installs/{git,vim,microsoft-build-tools-2022,chrome,7-zip,everything,windirstat}.bat"
 CD ..
-curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/master/{install,configure}.bat"
+curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/personal/TerryH/wip/{install,configure}.bat"
 "install.bat"
 ```
 ```

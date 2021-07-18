@@ -10,6 +10,7 @@ IF %ERRORLEVEL%==0 (
 		ECHO Cloning dotfiles into "%dotfiles%"
 		git clone https://github.com/TerryHughes/dotfiles.git "%dotfiles%" 2> NUL
 	)
+	IF EXIST "%dotfiles%" PUSHD "%dotfiles%" && git checkout personal/TerryH/wip && POPD
 
 	IF NOT EXIST "%dotfilesExternalTools%" (
 		ECHO Cloning dotfiles-externaltools into "%dotfilesExternalTools%"
