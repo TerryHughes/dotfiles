@@ -69,4 +69,6 @@ shp() {
 }
 alias st='g status --short --branch'
 
+PS1='[\u@\h \w]\n\$ '
+
 export PATH="$PATH:$HOME/tools"
