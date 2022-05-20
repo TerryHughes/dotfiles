@@ -81,3 +81,9 @@ IF NOT EXIST "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startup.ln
 	MOVE "%dotfiles%\startup* - Shortcut.lnk" "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startup.lnk" > NUL
 )
 CALL "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startup.lnk"
+
+
+IF NOT DEFINED prompt (
+	ECHO Setting prompt
+	setx prompt $P$S$+$_$G$S > NUL
+)
