@@ -21,3 +21,7 @@ pgo() {
 	pushd .
 	go $1 true
 }
+mcd() {
+	mkdir $1
+	cd $1
+}
