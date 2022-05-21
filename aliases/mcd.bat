@@ -1,0 +1,4 @@
+@ECHO OFF
+
+MKDIR %1 2>NUL
+CD %1
