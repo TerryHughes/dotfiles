@@ -1,0 +1,2 @@
+mkdir $1 2>/dev/null
+CD $1
