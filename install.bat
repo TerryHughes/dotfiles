@@ -19,4 +19,8 @@ IF NOT EXIST "%ProgramFiles%\Google\Chrome" (
 	CALL "installs\chrome.bat"
 )
 
+IF NOT EXIST "%ProgramFiles%\7-Zip" (
+	CALL "installs\7-zip.bat"
+)
+
 EXIT 0
