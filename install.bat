@@ -23,4 +23,8 @@ IF NOT EXIST "%ProgramFiles%\7-Zip" (
 	CALL "installs\7-zip.bat"
 )
 
+IF NOT EXIST "%ProgramFiles%\Everything" (
+	CALL "installs\everything.bat"
+)
+
 EXIT 0
