@@ -27,4 +27,8 @@ IF NOT EXIST "%ProgramFiles%\Everything" (
 	CALL "installs\everything.bat"
 )
 
+IF NOT EXIST "%ProgramFiles(x86)%\WinDirStat" (
+	CALL "installs\windirstat.bat"
+)
+
 EXIT 0
