@@ -5,7 +5,7 @@ curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/master/tools/
 CD ..
 MKDIR "installs"
 CD "installs"
-curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/master/installs/{git,vim,microsoft-build-tools-2022,chrome,7-zip,everything}.bat"
+curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/master/installs/{git,vim,microsoft-build-tools-2022,chrome,7-zip,everything,windirstat}.bat"
 CD ..
 curl -LJOs "https://raw.githubusercontent.com/TerryHughes/dotfiles/master/{install,configure}.bat"
 "install.bat"
