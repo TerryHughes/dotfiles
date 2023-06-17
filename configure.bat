@@ -14,7 +14,7 @@ IF %ERRORLEVEL%==0 (
 
 	IF NOT EXIST "%dotfilesExternalTools%" (
 		ECHO Cloning dotfiles-externaltools into "%dotfilesExternalTools%"
-		git clone https://github.com/TerryHughes/dotfiles-externaltools.git "%dotfilesExternalTools%" 2> NUL
+		MKDIR "%dotfilesExternalTools%"
 	)
 )
 
