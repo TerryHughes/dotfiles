@@ -20,3 +20,16 @@ RMDIR /S /Q "tools"
 EXIT 0
 
 ```
+```
+git clone dotfiles
+mkdir bin
+cp dotfiles/aliases/fstr bin/
+cp dotfiles/aliases/fs bin/
+cp dotfiles/aliases/v bin/
+chmod +x bin/fstr
+chmod +x bin/fs
+chmod +x bin/v
+export PATH=$PATH:$HOME/bin
+cp -r dotfiles/configurations/vimfiles/ .vim
+
+```
