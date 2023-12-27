@@ -18,3 +18,13 @@ RMDIR /S /Q "installs"
 RMDIR /S /Q "tools"
 EXIT 0
 ```
+```
+git clone https://github.com/TerryHughes/dotfiles.git
+cp /home/terryh/dotfiles/.bashrc /home/terryh/
+ln -s /home/terryh/dotfiles/configurations/git/ /home/terryh/.config/git/
+ln -s /home/terryh/dotfiles/configurations/hypr/ /home/terryh/.config/hypr/
+ln -s /home/terryh/dotfiles/configurations/lazygit/ /home/terryh/.config/lazygit/
+ln -s /home/terryh/dotfiles/configurations/vimfiles/ /home/terryh/.config/vim/
+ln -s /home/terryh/dotfiles/configurations/waybar/ /home/terryh/.config/waybar/
+ln -s /home/terryh/dotfiles/tools/ /home/terryh/tools/
+```

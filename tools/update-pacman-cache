@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo cp -n /var/cache/pacman/pkg/* /home/terryh/Terry/archlinux/var/cache/pacman/pkg
+sudo repo-add /home/terryh/Terry/archlinux/var/cache/pacman/pkg/cache.db.tar.zst /home/terryh/Terry/archlinux/var/cache/pacman/pkg/*.pkg.tar.zst
