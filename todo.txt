@@ -1,0 +1,1 @@
+work through the history and rename vimfiles to vim and update the Windows scripts to rename it to vimfiles (linux works with vim under .config)
