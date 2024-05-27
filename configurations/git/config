@@ -2,7 +2,7 @@
 	name = TerryH
 	email = terry@tnthughes.net
 [core]
-	editor = "C:/Windows/gvim.bat -f"
+	editor = vim
 [rebase]
 	autoSquash = true
 	autoStash = true
