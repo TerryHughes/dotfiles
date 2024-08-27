@@ -21,8 +21,8 @@ nmap <Leader>E :edit $MYVIMRC<CR>
 nmap <Leader>G :edit $MYGVIMRC<CR>
 nmap <Leader>S :source $MYVIMRC<CR>:source $MYGVIMRC<CR>
 
-nmap <Leader>L :wincmd o<CR>:copen<CR>:wincmd L<CR>:5split data/todo.txt<CR>:wincmd r<CR>:wincmd w<CR>:50wincmd ><CR>:grep "(TerryH): [next] "<CR>
-nmap <Leader>b :wall<CR>:silent make<CR>
+nmap <Leader>L :wincmd o<CR>:copen<CR>:wincmd L<CR>:5split data/todo.txt<CR>:wincmd r<CR>:wincmd w<CR>:50wincmd ><CR>:grep "(TerryH): [next] "<CR><C-L>
+nmap <Leader>b :wall<CR>:silent make<CR><C-L>
 nmap <Leader>c o<CR>case 0:<CR>{<CR>} break;<Esc>2kbs
 nmap <Leader>d o<CR>default:<CR>{<CR>} break;<Esc>O
 nmap <Leader>f O// FIXME(TerryH):<Space>
