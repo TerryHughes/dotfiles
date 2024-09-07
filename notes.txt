@@ -1,0 +1,2 @@
+mcd doesnt work correctly on popos
+gg doesnt work correctly on popos
