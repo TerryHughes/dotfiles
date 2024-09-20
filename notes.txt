@@ -1,2 +1,5 @@
 mcd doesnt work correctly on popos
 gg doesnt work correctly on popos
+
+https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/
