@@ -42,6 +42,7 @@ alias f='g fetch'
 alias fpdr='f --prune --dry-run'
 alias g='git'
 alias l='g log --graph --oneline'
+alias la='l --all'
 alias st='g status --short --branch'
 
 PS1='[\u@\h \W]\$ '
