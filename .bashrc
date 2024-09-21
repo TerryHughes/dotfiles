@@ -41,6 +41,7 @@ alias co='g checkout'
 alias f='g fetch'
 alias fpdr='f --prune --dry-run'
 alias g='git'
+alias l='g log --graph --oneline'
 alias st='g status --short --branch'
 
 PS1='[\u@\h \W]\$ '
