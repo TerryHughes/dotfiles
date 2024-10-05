@@ -45,6 +45,8 @@ imap <Leader><Tab> <Esc>:set expandtab<CR>a<Tab><Esc>:set noexpandtab<CR>a
 vmap <Leader>t :s/=/                =/<CR>
 vmap <Leader>u <...
 
+runtime! ftplugin/man.vim
+
 
 
 "int
