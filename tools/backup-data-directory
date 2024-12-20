@@ -1,0 +1,33 @@
+Project=$(basename $PWD)
+FormattedDate=$(date +%Y%m%d)
+
+BackupName=$Project-$FormattedDate.zip
+
+if [ -d "./data" ]; then
+	if hash zip 2> /dev/null; then
+		if [ -d ~/Terry ]; then
+			if hash cloc 2> /dev/null; then
+				mkdir "data/cloc" 2> /dev/null
+				cloc --by-file-by-lang --report-file="data/cloc/$FormattedDate.txt" --vcs=git . > /dev/null
+			fi
+
+			if hash ctime 2> /dev/null; then
+				if [ -d "./data/$Project.ctm" ]; then
+					mkdir "data/ctime" 2> /dev/null
+					ctime -stats "data/$Project.ctm" > "data/ctime/$FormattedDate.txt"
+				fi
+			fi
+
+			zip -rq "$BackupName" "data"
+
+			mkdir ~/Terry/DataDirectoryBackups 2> /dev/null
+			mv "$BackupName" ~/Terry/DataDirectoryBackups
+		else
+			echo No backup could be made because the Terry directory does not exist
+		fi
+	else
+		echo No backup could be made because zip is not installed
+	fi
+else
+	echo No backup could be make because no data directory exists
+fi
