@@ -1,4 +1,5 @@
 git:
+  autoFowardBranches: none
   branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
   allBranchesLogCmds:
     - "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline --all --"
