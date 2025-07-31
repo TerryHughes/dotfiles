@@ -1,1 +1,4 @@
 work through the history and rename vimfiles to vim and update the Windows scripts to rename it to vimfiles (linux works with vim under .config)
+
+add deletable-files to Windows installation (optional maybe?)
+	fsutil file createnew {name}.dat 1073741824
