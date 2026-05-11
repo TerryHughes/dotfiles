@@ -1,5 +1,6 @@
 syntax keyword cOperator _PreventExecution InvalidCodePath InvalidDefaultCase Assert _StaticAssert3 _StaticAssert2 _StaticAssert1 StaticAssert NotImplemented NotSupported InvalidOperation DoNothing
 syntax keyword cOperator nameof
+syntax keyword cOperator defer
 
 syntax keyword cType u8 u16 u32 u64
 syntax keyword cType s8 s16 s32 s64
