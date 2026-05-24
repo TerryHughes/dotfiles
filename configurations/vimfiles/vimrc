@@ -47,6 +47,8 @@ vmap <Leader>u <...
 
 runtime! ftplugin/man.vim
 
+set exrc
+
 
 
 "int
