@@ -16,6 +16,8 @@ go() {
 
 	Location=$1
 
+	if [ $Location == "zp" ]; then Location="ZeroPoint"; fi
+
 	if [ -d ~/projects/$Location ]; then
 		cd ~/projects/$Location
 		return
