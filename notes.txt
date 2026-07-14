@@ -5,3 +5,8 @@ https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
 https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/
 
 seems like gvim is no longer available as an executable, they might have changed to doing signed exes
+
+
+when setting up a Windows VM on arch on Jul. 13, 2026:
+* vim isnt available as coded for 8.2, but a new 9.2 version is available (gvim_9.2.0000_x64.exe)
+* windirstat finally updated and the new version is 2.7.0 and downloadable from the windirstat website
