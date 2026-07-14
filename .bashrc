@@ -53,6 +53,7 @@ fs() {
 	fstr $1 --include="*.sh" --include="*.h" --include="*.c"
 }
 alias v='vim'
+alias gh='eval "$(cat ~/tools/ssh-github)"'
 
 alias ap='g add --patch'
 alias br='g branch'

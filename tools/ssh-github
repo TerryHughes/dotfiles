@@ -1,0 +1,19 @@
+# https://stackoverflow.com/a/48509425
+
+ssh-add -l &> /dev/null
+if [ "$?" == 2 ]; then
+	test -r ~/.ssh/agents/github && eval "$(< ~/.ssh/agents/github)" > /dev/null
+
+	ssh-add -l &> /dev/null
+	if [ "$?" == 2 ]; then
+		mkdir ~/.ssh/agents 2> /dev/null
+		# umask 066
+		(umask u=rwx,g=x,o=x; ssh-agent -t 8h > ~/.ssh/agents/github)
+		eval "$(< ~/.ssh/agents/github)" > /dev/null
+	fi
+fi
+
+ssh-add -l &> /dev/null
+if [ "$?" == 1 ]; then
+	ssh-add -t 1h ~/.ssh/github_ed25519
+fi
