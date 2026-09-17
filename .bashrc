@@ -54,6 +54,9 @@ alias fstr='grep -inr'
 fs() {
 	fstr $1 --include="*.sh" --include="*.h" --include="*.c"
 }
+ff() {
+	find . -type f | grep $1
+}
 alias v='vim'
 alias gh='eval "$(cat ~/tools/ssh-github)"'
 
