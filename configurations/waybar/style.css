@@ -11,6 +11,10 @@ window#waybar {
     /*transition-duration: .5s;*/
 }
 
+#workspaces button {
+    color: #cccccc;
+}
+
 window#waybar.hidden {
     /*opacity: 0.2;*/
 }
@@ -169,6 +173,15 @@ window#waybar.chromium {
     /* avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
+}
+
+/* disable hover/prelight effect on workspaces button (see https://github.com/Alexays/Waybar/issues/60#issuecomment-1604253114) */
+#workspaces button:hover {
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+    transition: none;
+    background-color: #666666;
 }
 
 /* if workspaces is the leftmost module, omit left margin */
