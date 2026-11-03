@@ -28,6 +28,7 @@ source .bashrc
 mkdir .config
 ln --symbolic --relative dotfiles/configurations/git .config/git
 ln --symbolic --relative dotfiles/configurations/hypr .config/hypr
+ln --symbolic --relative dotfiles/configurations/kitty .config/kitty
 ln --symbolic --relative dotfiles/configurations/lazygit .config/lazygit
 ln --symbolic --relative dotfiles/configurations/vimfiles .config/vim
 ln --symbolic --relative dotfiles/configurations/waybar .config/waybar
