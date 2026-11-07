@@ -40,4 +40,4 @@ syntax match cNumber display "\<0x\x\('\=\x\+\)*\(u\=l\{0,2}\|ll\=u\)\>"
 
 syntax match cInclude display "^\s*\zs\(%:\|#\)\s*include\>\s*preprocessor.\+" contains=cIncluded
 
-syntax keyword Ignore UNUSED_PARAMETER UNUSED_RETURN_VALUE
+syntax keyword Ignore UNUSED_PARAMETER DISCARD
