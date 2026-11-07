@@ -9,6 +9,8 @@ alias ls='ls --color=auto'
 alias ll='ls --color=auto -l --human-readable -v --group-directories-first --almost-all'
 alias grep='grep --color=auto'
 alias pacman='pacman --color auto'
+alias tree='tree -C'
+alias tt='tree --gitignore --dirsfirst -C'
 
 go() {
 	SetTitle=true
