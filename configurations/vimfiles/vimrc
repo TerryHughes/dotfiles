@@ -28,6 +28,7 @@ nmap <Leader>d o<CR>default:<CR>{<CR>} break;<Esc>O
 nmap <Leader>f O// FIXME(TerryH):<Space>
 nmap <Leader>i o}<Esc>k<C-V>j%j><C-O>
 nmap <Leader>n O// NOTE(TerryH):<Space>
+nmap <Leader>r ciw<C-r>=join(reverse(split(@", '\zs')), '')<CR><Esc>
 nmap <Leader>t O// TODO(TerryH):<Space>
 nmap <Leader>u j0<C-V>k%k<k%dd<C-O>.
 
